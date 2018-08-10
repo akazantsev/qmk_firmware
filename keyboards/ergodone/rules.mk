@@ -72,7 +72,7 @@ OPT_DEFS += -DBOOTLOADER_SIZE=4096
 #
 CUSTOM_MATRIX           = yes # Custom matrix file for the ErgoDone
 UNICODE_ENABLE          = no # Unicode
-BOOTMAGIC_ENABLE        = yes	# Virtual DIP switch configuration(+1000)
+BOOTMAGIC_ENABLE        = no	# Virtual DIP switch configuration(+1000)
 MOUSEKEY_ENABLE         = no	# Mouse keys(+4700)
 EXTRAKEY_ENABLE         = yes	# Audio control and System control(+450)
 CONSOLE_ENABLE          = no	# Console for debug(+400)
@@ -82,7 +82,7 @@ NKRO_ENABLE             = yes	# USB Nkey Rollover - not yet supported in LUFA
 USB_6KRO_ENABLE         = no  # USB 6key Rollover
 BACKLIGHT_ENABLE        = no	# Enable keyboard backlight functionality
 KEYMAP_IN_EEPROM_ENABLE = no 	# External keymap in eeprom
-KEYMAP_SECTION_ENABLE   = no	# Fixed address keymap for keymap editor
+KEYMAP_SECTION_ENABLE   = yes # Fixed address keymap for keymap editor
 SOFTPWM_LED_ENABLE      = no  # Enable SoftPWM to drive backlight
 FADING_LED_ENABLE       = no  # Enable fading backlight
 BREATHING_LED_ENABLE    = no  # Enable breathing backlight
@@ -91,5 +91,6 @@ LEDMAP_IN_EEPROM_ENABLE = no  # Read LED mapping from eeprom
 SWAP_HANDS_ENABLE       = no  # Disable Onehand
 RGBLIGHT_ENABLE         = no
 MIDI_ENABLE             = no
+AUTO_SHIFT_ENABLE       = yes
 
 LAYOUTS = ergodox
