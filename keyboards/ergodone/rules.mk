@@ -91,6 +91,6 @@ LEDMAP_IN_EEPROM_ENABLE = no  # Read LED mapping from eeprom
 SWAP_HANDS_ENABLE       = no  # Disable Onehand
 RGBLIGHT_ENABLE         = no
 MIDI_ENABLE             = no
-AUTO_SHIFT_ENABLE       = yes
+AUTO_SHIFT_ENABLE       = no
 
 LAYOUTS = ergodox
