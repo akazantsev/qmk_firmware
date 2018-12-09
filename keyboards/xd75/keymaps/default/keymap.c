@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
  * | LSHIFT | ;      | Q      | J      | K      | X      | DEL    | TG QW  | BACKSP | B      | M      | W      | V      | Z      | RSHIFT |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | LCTRL  | LGUI   | HOME   | END    | LALT   | FN     | SPACE  | LANG   | ENTER  | FN     | SPACE  | PG UP  | PG DN  | RGUI   | RCTRL  |
+ * | LCTRL  | LGUI   | HOME   | END    | LALT   | SPACE  | FN     | LANG   | FN     | ENTER  | RALT   | PG UP  | PG DN  | RGUI   | RCTRL  |
  * '--------------------------------------------------------------------------------------------------------------------------------------'
  */
 
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   { KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_LBRC, KC_BSLS, KC_RBRC, KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_SLSH  },
   { KC_ESC,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_HOME, KC_DEL,  KC_PGUP, KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_MINS  },
   { KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_DEL,  TG(_QW), KC_BSPC, KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_RSFT  },
-  { KC_LCTL, KC_LGUI, KC_HOME, KC_END,  KC_LALT, MO(_FN), KC_SPC,  LANG,    KC_ENT,  MO(_FN), KC_RALT, KC_PGUP, KC_PGDN, KC_RGUI, KC_RCTL  },
+  { KC_LCTL, KC_LGUI, KC_HOME, KC_END,  KC_LALT, KC_SPC,  MO(_FN), LANG,    MO(_FN), KC_ENT,  KC_RALT, KC_PGUP, KC_PGDN, KC_RGUI, KC_RCTL  },
  },
 
 /* QWERTY
@@ -79,9 +79,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
  * |        |        |        |        | RGB SD | RGB SI | P4     | P5     | P6     | LEFT   | UP     | DOWN   | RIGHT  | MUTE   |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | VOL-   | MUTE   | VOL+   |        | RGB VD | RGB VI | P1     | P2     | P3     | PENT   |        |        |        | VOL-   |        |
+ * |        |        |        |        | RGB VD | RGB VI | P1     | P2     | P3     | PENT   |        |        |        | VOL-   |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * |        |        | RGB TG | FN     | RGB RMD| RGB MD | P0     |        | P.     | PENT   |        |        |        |        | RESET  |
+ * |        |        | RGB TG |        | RGB RMD| RGB MD |        |        |        |        |        |        |        |        | RESET  |
  * '--------------------------------------------------------------------------------------------------------------------------------------'
  */
 
@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   { _______, RGB_HUI, RGB_SAI, RGB_VAI, RGB_MOD, RGB_TOG, KC_P7,   KC_P8,   KC_P9,   KC_MINS, KC_PSCR, KC_SLCK, KC_PAUS, KC_VOLU, KC_F12   },
   { _______, RGB_HUD, RGB_SAD, RGB_VAD, RGB_RMOD,_______, KC_P4,   KC_P5,   KC_P6,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, KC_MUTE, _______  },
   { _______, _______, _______, _______, _______, _______, KC_P1,   KC_P2,   KC_P3,   KC_PENT, _______, _______, _______, KC_VOLD, _______  },
-  { _______, _______, _______, _______, _______, MO(_FN), KC_P0,   _______, KC_PDOT, MO(_FN), _______, _______, _______, _______, RESET    },
+  { _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RESET    },
  }
 };
 
