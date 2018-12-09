@@ -82,7 +82,7 @@ NKRO_ENABLE             = yes	# USB Nkey Rollover - not yet supported in LUFA
 USB_6KRO_ENABLE         = no  # USB 6key Rollover
 BACKLIGHT_ENABLE        = no	# Enable keyboard backlight functionality
 KEYMAP_IN_EEPROM_ENABLE = no 	# External keymap in eeprom
-KEYMAP_SECTION_ENABLE   = yes # Fixed address keymap for keymap editor
+KEYMAP_SECTION_ENABLE   = no # Fixed address keymap for keymap editor
 SOFTPWM_LED_ENABLE      = no  # Enable SoftPWM to drive backlight
 FADING_LED_ENABLE       = no  # Enable fading backlight
 BREATHING_LED_ENABLE    = no  # Enable breathing backlight
@@ -92,5 +92,6 @@ SWAP_HANDS_ENABLE       = no  # Disable Onehand
 RGBLIGHT_ENABLE         = no
 MIDI_ENABLE             = no
 AUTO_SHIFT_ENABLE       = no
+TAP_DANCE_ENABLE        = no
 
 LAYOUTS = ergodox
