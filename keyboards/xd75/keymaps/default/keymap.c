@@ -29,24 +29,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Dvorak
  * .--------------------------------------------------------------------------------------------------------------------------------------.
- * | `      | 1      | 2      | 3      | 4      | 5      | -      | LANG   | =      | 6      | 7      | 8      | 9      | 0      | BACKSP |
+ * | `      | 1      | 2      | 3      | 4      | 5      | -      | LANG   | =      | 6      | 7      | 8      | 9      | 0      | =      |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
  * | TAB    | '      | ,      | .      | P      | Y      | [      | \      | ]      | F      | G      | C      | R      | L      | /      |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | ESC    | A      | O      | E      | U      | I      | HOME   | DEL    | PG UP  | D      | H      | T      | N      | S      | ENTER  |
+ * | ESC    | A      | O      | E      | U      | I      | HOME   | DEL    | PG UP  | D      | H      | T      | N      | S      | -      |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | LSHIFT | ;      | Q      | J      | K      | X      | END    | UP     | PG DN  | B      | M      | W      | V      | Z      | RSHIFT |
+ * | LSHIFT | ;      | Q      | J      | K      | X      | DEL    | TG QW  | BACKSP | B      | M      | W      | V      | Z      | RSHIFT |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | LCTRL  | LGUI   | LALT   | FN     | SPACE  | SPACE  | LEFT   | DOWN   | RIGHT  | SPACE  | SPACE  | FN     | RALT   | RGUI   | RCTRL  |
+ * | LCTRL  | LGUI   | HOME   | END    | LALT   | FN     | SPACE  | LANG   | ENTER  | FN     | SPACE  | PG UP  | PG DN  | RGUI   | RCTRL  |
  * '--------------------------------------------------------------------------------------------------------------------------------------'
  */
 
  [_DV] = { /* Dvorak */
-  { KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_MINS, LANG,    KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC  },
+  { KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_MINS, LANG,    KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_EQL  },
   { KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_LBRC, KC_BSLS, KC_RBRC, KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_SLSH  },
-  { KC_ESC,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_HOME, KC_DEL,  KC_PGUP, KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_ENT   },
-  { KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_END,  KC_UP,   KC_PGDN, KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_RSFT  },
-  { KC_LCTL, KC_LGUI, KC_LALT, MO(_FN), KC_SPC,  KC_SPC,  KC_LEFT, KC_DOWN, KC_RGHT, KC_SPC,  KC_SPC,  MO(_FN), KC_RALT, KC_RGUI, KC_RCTL  },
+  { KC_ESC,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_HOME, KC_DEL,  KC_PGUP, KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_MINS  },
+  { KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_DEL,  TG(_QW), KC_BSPC, KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_RSFT  },
+  { KC_LCTL, KC_LGUI, KC_HOME, KC_END,  KC_LALT, MO(_FN), KC_SPC,  LANG,    KC_ENT,  MO(_FN), KC_RALT, KC_PGUP, KC_PGDN, KC_RGUI, KC_RCTL  },
  },
 
 /* QWERTY
@@ -67,30 +67,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   { _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_MINS, _______, KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______  },
   { _______, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_LBRC, KC_BSLS, KC_RBRC, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_QUOT  },
   { _______, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_HOME, KC_DEL,  KC_PGUP, KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, _______  },
-  { _______, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_END,  KC_UP,   KC_PGDN, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, _______  },
+  { _______, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_END,  TG(_QW), KC_PGDN, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, _______  },
   { _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  },
  },
 
 /* FUNCTION
  * .--------------------------------------------------------------------------------------------------------------------------------------.
- * | F1     | F2     | F3     | F4     | F5     | F6     | NUM LK | P/     | P*     | F7     | F8     | F9     | F10    | F11    | F12    |
+ * |        | F1     | F2     | F3     | F4     | F5     | NUM LK | P/     | P*     | F6     | F7     | F8     | F9     | F10    | F11    |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | SELECT | CALC   | MYCOMP | MAIL   | RGB HD | RGB HI | P7     | P8     | P9     | -      |        |        | PR SCR | SCR LK | PAUSE  |
+ * |        |        |        |        | RGB HD | RGB HI | P7     | P8     | P9     | -      | PR SCR | SCR LK | PAUSE  | VOL+   | F12    |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | PREV   | PLAY   | NEXT   | STOP   | RGB SD | RGB SI | P4     | P5     | P6     | +      | LEFT   | UP     | DOWN   | RIGHT  |        |
+ * |        |        |        |        | RGB SD | RGB SI | P4     | P5     | P6     | LEFT   | UP     | DOWN   | RIGHT  | MUTE   |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * | VOL-   | MUTE   | VOL+   | APP    | RGB VD | RGB VI | P1     | P2     | P3     | PENT   |        |        |        |        |        |
+ * | VOL-   | MUTE   | VOL+   |        | RGB VD | RGB VI | P1     | P2     | P3     | PENT   |        |        |        | VOL-   |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * |        |        | RGB TG | FN     | RGB RMD| RGB MD | P0     |        | P.     | PENT   | PENT   | FN     |        |        | RESET  |
+ * |        |        | RGB TG | FN     | RGB RMD| RGB MD | P0     |        | P.     | PENT   |        |        |        |        | RESET  |
  * '--------------------------------------------------------------------------------------------------------------------------------------'
  */
 
  [_FN] = { /* FUNCTION */
-  { KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_NLCK, KC_SLSH, KC_ASTR, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12   },
-  { KC_MSEL, KC_CALC, KC_MYCM, KC_MAIL, RGB_HUD, RGB_HUI, KC_P7,   KC_P8,   KC_P9,   KC_MINS, _______, _______, KC_PSCR, KC_SLCK, KC_PAUS  },
-  { KC_MPRV, KC_MPLY, KC_MNXT, KC_MSTP, RGB_SAD, RGB_SAI, KC_P4,   KC_P5,   KC_P6,   KC_PLUS, KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, _______  },
-  { KC_VOLD, KC_MUTE, KC_VOLU, KC_APP,  RGB_VAD, RGB_VAI, KC_P1,   KC_P2,   KC_P3,   KC_PENT, _______, _______, _______, _______, _______  },
-  { _______, _______, RGB_TOG, MO(_FN), RGB_RMOD,RGB_MOD, KC_P0,   _______, KC_PDOT, KC_PENT, KC_PENT, MO(_FN), _______, _______, RESET    },
+  { _______,   KC_F1,   KC_F2,   KC_F3, KC_F4,   KC_F5,   KC_NLCK, KC_SLSH, KC_ASTR, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11   },
+  { _______, RGB_HUI, RGB_SAI, RGB_VAI, RGB_MOD, RGB_TOG, KC_P7,   KC_P8,   KC_P9,   KC_MINS, KC_PSCR, KC_SLCK, KC_PAUS, KC_VOLU, KC_F12   },
+  { _______, RGB_HUD, RGB_SAD, RGB_VAD, RGB_RMOD,_______, KC_P4,   KC_P5,   KC_P6,   KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, KC_MUTE, _______  },
+  { _______, _______, _______, _______, _______, _______, KC_P1,   KC_P2,   KC_P3,   KC_PENT, _______, _______, _______, KC_VOLD, _______  },
+  { _______, _______, _______, _______, _______, MO(_FN), KC_P0,   _______, KC_PDOT, MO(_FN), _______, _______, _______, _______, RESET    },
  }
 };
 
